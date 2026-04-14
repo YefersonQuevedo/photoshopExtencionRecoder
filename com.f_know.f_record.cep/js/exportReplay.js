@@ -135,7 +135,7 @@ async function _exportReplay(exportParams) {
         if (exportSettings.duration !== "0") {
             const duration = parseFloat(exportSettings.duration);
             let k = (duration - transitionDuration * 3) / (imageFiles.length / FPS);
-            k = Math.round(Math.min(Math.max(k, 0.001), 1) * 1000) / 1000;
+            k = Math.round(Math.max(k, 0.001) * 1000) / 1000;
             baseFfmpeg = baseFfmpeg.videoFilters('setpts=' + k + '*PTS');
         }
         baseFfmpeg

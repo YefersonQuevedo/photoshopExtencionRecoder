@@ -31255,7 +31255,11 @@ function ExportReplayButton({ configData, documentValue, exportSettings, progres
                                 30 < estimateDuration() && react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "30" }, 30 + t('s')),
                                 60 < estimateDuration() && react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "60" }, 60 + t('s')),
                                 180 < estimateDuration() && react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "180" }, 180 + t('s')),
-                                react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "0" }, estimateDuration() + t('s') + ' ' + t('(original)')))),
+                                react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "0" }, estimateDuration() + t('s') + ' ' + t('(original)')),
+                                estimateDuration() < 30 && react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "30" }, 30 + t('s')),
+                                estimateDuration() < 60 && react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "60" }, 60 + t('s')),
+                                estimateDuration() < 120 && react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "120" }, 120 + t('s')),
+                                estimateDuration() < 240 && react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "240" }, 240 + t('s')))),
                         react.createElement($884c64d19340d345$export$f51f4c4ede09e011, { justifyContent: "center" },
                             react.createElement($b865a6f0049e2d66$export$353f5b6fc5456de1, { variant: "accent", onPress: () => {
                                     clickConfirm(close);
