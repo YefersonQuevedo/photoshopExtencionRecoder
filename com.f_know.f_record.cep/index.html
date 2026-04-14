@@ -14,6 +14,9 @@ if (typeof FinalizationRegistry === 'undefined') {
 if (typeof Object.fromEntries === 'undefined') {
     Object.fromEntries = function(entries) { var o = {}; entries.forEach(function(e) { o[e[0]] = e[1]; }); return o; };
 }
+if (typeof queueMicrotask === 'undefined') {
+    window.queueMicrotask = function(fn) { Promise.resolve().then(fn); };
+}
 window.onerror = function(msg, src, line, col, err) {
     var box = document.getElementById('err-box');
     if (!box) { box = document.createElement('pre'); box.id = 'err-box'; box.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;margin:8px;padding:8px;background:#1e1e1e;color:#f88;font-size:11px;overflow:auto;z-index:9999;white-space:pre-wrap;word-break:break-all;'; document.body.appendChild(box); }
