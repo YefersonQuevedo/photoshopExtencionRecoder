@@ -32621,7 +32621,18 @@ function SettingsPanel({ configData, documentValue }) {
                     forceUpdate({});
                 } },
                 react.createElement($337c5cb580c4e6ba$export$d7b12c4107be0d61, { value: "cn" }, "\u4E2D\u6587"),
-                react.createElement($337c5cb580c4e6ba$export$d7b12c4107be0d61, { value: "en" }, "English")))));
+                react.createElement($337c5cb580c4e6ba$export$d7b12c4107be0d61, { value: "en" }, "English"))),
+        react.createElement($884c64d19340d345$export$f51f4c4ede09e011, { direction: "row", justifyContent: "space-between", marginBottom: "size-300" },
+            react.createElement($cd449e8defa988f0$export$5f1af8db9871e1d6, null, t('Transition')),
+            react.createElement($51664a9007a3c6f9$export$ba25329847403e11, { "aria-label": "Transition Duration", selectedKey: configData.current.transitionDuration, onSelectionChange: (key) => {
+                    configData.current.transitionDuration = key;
+                    forceUpdate({});
+                }, width: "size-1200" },
+                react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "0.5" }, "0.5s"),
+                react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "1" }, "1s"),
+                react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "2" }, "2s"),
+                react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "3" }, "3s"),
+                react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "5" }, "5s")))));
 }
 /* harmony default export */ const panel_SettingsPanel = (SettingsPanel);
 
@@ -32656,6 +32667,7 @@ function Panel() {
         idleTimeout: "1",
         language: "cn",
         lastExportTime: null,
+        transitionDuration: "1",
     });
     const defaultDocumentValue = {
         id: null,
@@ -35782,6 +35794,7 @@ const resources = {
             'Details': 'Details',
             'Open': 'Open',
             'Error': 'Error',
+            'Transition': 'Transition',
         }
     },
     cn: {
@@ -35826,6 +35839,7 @@ const resources = {
             'Details': '详情',
             'Open': '打开',
             'Error': '错误',
+            'Transition': '过渡',
         }
     }
 };
