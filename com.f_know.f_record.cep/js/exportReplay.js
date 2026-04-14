@@ -133,8 +133,13 @@ async function _exportReplay(exportParams) {
                             .inputFPS(FPS)
                             .videoCodec('libx264')
         if (exportSettings.duration !== "0") {
-            const duration = parseFloat(exportSettings.duration);
-            let k = (duration - transitionDuration * 3) / (imageFiles.length / FPS);
+            let k;
+            if (String(exportSettings.duration).startsWith('x')) {
+                k = parseFloat(exportSettings.duration.slice(1));
+            } else {
+                const duration = parseFloat(exportSettings.duration);
+                k = (duration - transitionDuration * 3) / (imageFiles.length / FPS);
+            }
             k = Math.round(Math.max(k, 0.001) * 1000) / 1000;
             baseFfmpeg = baseFfmpeg.videoFilters('setpts=' + k + '*PTS');
         }
