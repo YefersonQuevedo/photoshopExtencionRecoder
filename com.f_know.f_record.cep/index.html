@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>F_Record3</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>html, body {
+            margin: 0;
+            height: 100%;
+            background: white;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }</style><script src="js/CSInterface-6.1.0.js"></script><script>document.write('<script src="js/functions.js?t='+(new Date().getTime())+'"><\/script>');</script>
+<script>
+// Polyfills for older Chromium (Photoshop 2020)
+if (typeof FinalizationRegistry === 'undefined') {
+    window.FinalizationRegistry = function() { this.register = function() {}; this.unregister = function() {}; };
+}
+if (typeof Object.fromEntries === 'undefined') {
+    Object.fromEntries = function(entries) { var o = {}; entries.forEach(function(e) { o[e[0]] = e[1]; }); return o; };
+}
+window.onerror = function(msg, src, line, col, err) {
+    var box = document.getElementById('err-box');
+    if (!box) { box = document.createElement('pre'); box.id = 'err-box'; box.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;margin:8px;padding:8px;background:#1e1e1e;color:#f88;font-size:11px;overflow:auto;z-index:9999;white-space:pre-wrap;word-break:break-all;'; document.body.appendChild(box); }
+    box.textContent += (err ? err.stack || err : msg) + '\n  at ' + src + ':' + line + ':' + col + '\n\n';
+};
+</script>
+</head><body><div id="panel"></div><script src="panel.js"></script></body></html>
