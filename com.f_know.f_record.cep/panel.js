@@ -32620,8 +32620,9 @@ function SettingsPanel({ configData, documentValue }) {
                     forceUpdate({});
                 } },
                 react.createElement($337c5cb580c4e6ba$export$d7b12c4107be0d61, { value: "cn" }, "\u4E2D\u6587"),
-                react.createElement($337c5cb580c4e6ba$export$d7b12c4107be0d61, { value: "en" }, "English"))),
-        react.createElement($884c64d19340d345$export$f51f4c4ede09e011, { direction: "row", justifyContent: "space-between", marginBottom: "size-300" },
+                react.createElement($337c5cb580c4e6ba$export$d7b12c4107be0d61, { value: "en" }, "English"),
+                react.createElement($337c5cb580c4e6ba$export$d7b12c4107be0d61, { value: "es" }, "Espa\xF1ol"))),
+        react.createElement($884c64d19340d345$export$f51f4c4ede09e011, { direction: "row", justifyContent: "space-between", marginBottom: "size-100" },
             react.createElement($cd449e8defa988f0$export$5f1af8db9871e1d6, null, t('Transition')),
             react.createElement($51664a9007a3c6f9$export$ba25329847403e11, { "aria-label": "Transition Duration", selectedKey: configData.current.transitionDuration, onSelectionChange: (key) => {
                     configData.current.transitionDuration = key;
@@ -32631,7 +32632,12 @@ function SettingsPanel({ configData, documentValue }) {
                 react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "1" }, "1s"),
                 react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "2" }, "2s"),
                 react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "3" }, "3s"),
-                react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "5" }, "5s")))));
+                react.createElement($c1d7fb2ec91bae71$export$6d08773d2e66f8f2, { key: "5" }, "5s"))),
+        react.createElement($884c64d19340d345$export$f51f4c4ede09e011, { direction: "column", alignItems: "center", marginTop: "size-200" },
+            react.createElement($cd449e8defa988f0$export$5f1af8db9871e1d6, { UNSAFE_style: { fontSize: "10px", opacity: 0.5 } }, "Fork: "),
+            react.createElement($cd449e8defa988f0$export$5f1af8db9871e1d6, { UNSAFE_style: { fontSize: "10px", opacity: 0.7, cursor: "pointer", textDecoration: "underline" }, UNSAFE_className: "about-link", onClick: () => { //@ts-ignore
+                cs.openURLInDefaultBrowser("https://github.com/YefersonQuevedo/photoshopExtencionRecoder"); } }, "YefersonQuevedo/photoshopExtencionRecoder"),
+            react.createElement($cd449e8defa988f0$export$5f1af8db9871e1d6, { UNSAFE_style: { fontSize: "10px", opacity: 0.5, marginTop: "2px" } }, "Original: F_know"))));
 }
 /* harmony default export */ const panel_SettingsPanel = (SettingsPanel);
 
@@ -35797,6 +35803,56 @@ const resources = {
             'fast': 'fast',
             'slow': 'slow',
             'very slow': 'very slow',
+            'About': 'About',
+        }
+    },
+    es: {
+        translation: {
+            'Dashboard': 'Panel',
+            'Settings': 'Ajustes',
+            'Process Image Folder': 'Carpeta de imágenes',
+            'Resolution': 'Resolución',
+            'Quality': 'Calidad',
+            'Idle Timeout': 'Tiempo inactivo',
+            'Language': 'Idioma',
+            'select folder': 'seleccionar carpeta',
+            'min': 'min',
+            'h': 'h',
+            'm': 'm',
+            's': 's',
+            'Off': 'Apagado',
+            'low': 'bajo',
+            'medium': 'medio',
+            'high': 'alto',
+            'Enabled': 'Activado',
+            'Disabled': 'Desactivado',
+            'Document': 'Documento',
+            'Image Count': 'Nº de imágenes',
+            'Time Spent': 'Tiempo dedicado',
+            'Open Process Image Folder': 'Abrir carpeta de imágenes',
+            'Export': 'Exportar',
+            'Select Process Image Folder': 'Seleccionar carpeta de imágenes',
+            'The higher the Quality you select, the lower the compression rate applied to the image.': 'A mayor calidad seleccionada, menor compresión se aplica a la imagen.',
+            'When the time elapsed since the last painting exceeds the preset duration, the timer will automatically stop.': 'Cuando el tiempo desde la última pincelada supere la duración indicada, el temporizador se detendrá automáticamente.',
+            'Aspect Ratio': 'Relación de aspecto',
+            'Duration': 'Duración',
+            '(original)': '(original)',
+            'match canvas': 'igual al lienzo',
+            'Confirm': 'Confirmar',
+            'Start to export': 'Iniciando exportación',
+            'Export success': 'Exportación exitosa',
+            'Export failed': 'Error al exportar',
+            'generating video...': 'generando video...',
+            'loading image...': 'cargando imágenes...',
+            'saving video...': 'guardando video...',
+            'Details': 'Detalles',
+            'Open': 'Abrir',
+            'Error': 'Error',
+            'Transition': 'Transición',
+            'fast': 'rápido',
+            'slow': 'lento',
+            'very slow': 'muy lento',
+            'About': 'Acerca de',
         }
     },
     cn: {
@@ -35845,6 +35901,7 @@ const resources = {
             'fast': '快速',
             'slow': '慢速',
             'very slow': '非常慢',
+            'About': '关于',
         }
     }
 };
