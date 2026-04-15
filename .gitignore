@@ -1,0 +1,8 @@
+# Dependencias — se instalan con npm install
+node_modules/
+
+# Archivos de distribución comprimidos
+*.zip
+
+# Datos internos de Claude Code
+.claude/
