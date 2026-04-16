@@ -5,7 +5,7 @@ Extensión CEP para Adobe Photoshop que graba automáticamente el proceso de dib
 > **Fork realizado por [YefersonQuevedo](https://github.com/YefersonQuevedo/photoshopExtencionRecoder)**
 > con mejoras de compatibilidad para Photoshop 2020 y nuevas funcionalidades.
 >
-> Créditos al creador original: **[F_know](https://space.bilibili.com/390484)** — autor de F_Record 3.
+> Créditos al creador original: **[F_know]([https://space.bilibili.com/390484](https://github-com.translate.goog/F-know/F_Record?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc))** — autor de F_Record 3.
 
 ---
 
